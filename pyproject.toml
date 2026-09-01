@@ -1,0 +1,28 @@
+[project]
+name = "language-tutor-portfolio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.16.5",
+]
+[tool.ruff]
+target-version = "py312"
+line-length = 150
+
+[tool.ruff.lint]
+select = [
+    "E", "W",    # pycodestyle (style errors)
+    "F",         # pyflakes (unused imports, etc.)
+    "I",         # isort (import sorting)
+    "B",         # bugbear (common bugs)
+    "UP",        # pyupgrade (flags old-style syntax)
+    "ASYNC",     # async mistakes
+ ]
