@@ -26,3 +26,10 @@ select = [
     "UP",        # pyupgrade (flags old-style syntax)
     "ASYNC",     # async mistakes
  ]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = false  # Start lenient, enable later
+check_untyped_defs = true
